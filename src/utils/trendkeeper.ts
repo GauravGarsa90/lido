@@ -34,16 +34,26 @@ class Trendkeeper{
     registerHit(productId: string){
         let hitCount: number;
         if(!this.hitInfo){
+            /**
+             * Init trendkeeper if it is the first entry
+             */
             this.hitInfo = new Map();
             this.list.initHead(1, productId);
             this.hitInfo[productId] = 1;
             this.count = 1;
         }else{
+            /**
+             * If trendkeeper has been initialized
+             * get hit data for product if present
+             */
             if(this.hitInfo[productId]){
                 hitCount = this.hitInfo[productId] + 1;
             }else{
                 hitCount = 1;
             }
+            /**
+             * If current product needs to be added to top k list add it
+             */
             if(this.list.products.has(productId)){
                 this.list.move(hitCount-1,hitCount,productId)
             }else if(this.count<this.size){
@@ -57,6 +67,9 @@ class Trendkeeper{
         }
     }
     getTrendingList(): Array<string> {
+        /**
+         * fetch top k products
+         */
         return this.list.readAll();
     }
 }

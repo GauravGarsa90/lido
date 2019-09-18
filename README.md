@@ -1,5 +1,6 @@
 -   Working:
     This project is build on NodeJs typescript.
+    Number of products is set in ./src/index.ts at line 29 (`TrendkeeperSingleton.getInstance(10)`) currently it is set at 10.
 -   -   Common commands:
     Starting the server: npm run start
         This command transpiles the  code and runs the server locally

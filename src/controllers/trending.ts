@@ -1,5 +1,5 @@
 import { TrendkeeperSingleton } from '../utils/trendkeeper';
-const trends = TrendkeeperSingleton.getInstance(10)
+const trends = TrendkeeperSingleton.getInstance()
 export const trending = (req, res) => {
     if(trends.list)
         res.end({
