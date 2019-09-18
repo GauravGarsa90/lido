@@ -1,0 +1,44 @@
+swagger: "2.0"
+info:
+  description: Lido interview assignment
+  version: "1.0.0"
+  title: product feed
+basePath: "/lido/v1"
+schemes:
+  - "https"
+paths:
+  /trending:
+    get:
+      x-swagger-router-controller: "trending"
+      operationId: "trending"
+      responses:
+        200:
+          description: OK
+          schema: 
+            "$ref": "#/definitions/ServerInfo"
+  /feed/{product}:
+    post:
+      parameters:
+        - in: path
+          name: product
+          required: true
+          type: string
+      x-swagger-router-controller: "feed"
+      operationId: "feed"
+      summary: test
+      responses:
+        200:
+          description: OK
+
+    
+            
+definitions:
+  ServerInfo:
+    type: "object"
+    properties:
+      timeStamp:
+        type: "string"
+      trending:
+        type: "array"
+        items:
+          type: "string"

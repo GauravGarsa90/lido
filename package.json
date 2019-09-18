@@ -20,6 +20,7 @@
     "@types/node": "^12.7.3",
     "@types/node-fetch": "^2.5.0",
     "@types/swagger-tools": "^0.10.6",
+    "commitizen": "^4.0.3",
     "connect": "^3.7.0",
     "dotenv": "^8.1.0",
     "fs": "0.0.1-security",
