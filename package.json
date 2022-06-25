@@ -26,7 +26,7 @@
     "fs": "0.0.1-security",
     "js-yaml": "^3.13.1",
     "mysql": "^2.17.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "shx": "^0.3.2",
     "swagger-tools": "^0.10.4",
     "ts-lint": "^4.5.1",
